@@ -1,0 +1,20 @@
+{
+  "name": "@groupdeal/pricing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Authoritative integer-paise pricing engine for GroupDeal with golden vector verification",
+  "main": "src/engine.ts",
+  "types": "src/engine.ts",
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/engine.test.ts"
+  },
+  "keywords": [
+    "groupdeal",
+    "pricing-engine",
+    "group-buying",
+    "reverse-auction",
+    "fintech"
+  ],
+  "author": "Arul Murugan M, Ritvik Doddapaneni",
+  "license": "MIT"
+}

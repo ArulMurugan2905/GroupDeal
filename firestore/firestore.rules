@@ -1,0 +1,92 @@
+rules_version = '2';
+// GroupDeal — production Firestore rules.
+// Principle: clients READ public/own data; every state-changing business write
+// (join, leave, vote, bid, order, payment, rating) goes through a callable Cloud Function
+// using the Admin SDK, which bypasses these rules. Status: NOT VERIFIED against the emulator.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isSelf(uid) { return signedIn() && request.auth.uid == uid; }
+    function role() { return signedIn() ? request.auth.token.get('role', 'customer') : null; }
+    function isAdmin() { return role() == 'admin'; }
+    function isVerifiedSupplier() { return role() == 'supplier' && request.auth.token.get('supplierStatus', '') == 'VERIFIED'; }
+    function onlyChanges(keys) { return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys); }
+
+    match /config/app { allow read: if signedIn(); allow write: if false; }   // public tunables only
+    match /config/{doc} { allow read, write: if false; }                     // e.g. config/admins: server-only
+    match /localities/{id} { allow read: if true; allow write: if false; }
+
+    match /users/{uid} {
+      allow read: if isSelf(uid) || isAdmin();
+      allow create: if false;                                   // created by onUserCreate trigger
+      allow update: if isSelf(uid) && onlyChanges(['displayName', 'photoUrl', 'preferences', 'updatedAt']);
+      match /devices/{deviceId} {
+        allow read, delete: if isSelf(uid);
+        allow create, update: if isSelf(uid)
+          && request.resource.data.keys().hasOnly(['fcmToken', 'platform', 'appVersion', 'updatedAt'])
+          && request.resource.data.fcmToken is string && request.resource.data.fcmToken.size() < 4096;
+      }
+      match /notifications/{nid} {
+        allow read: if isSelf(uid);
+        allow update: if isSelf(uid) && onlyChanges(['readAt']);
+        allow create, delete: if false;
+      }
+      match /watchlist/{groupId} {
+        allow read, delete: if isSelf(uid);
+        allow create: if isSelf(uid) && request.resource.data.keys().hasOnly(['addedAt']);
+      }
+    }
+
+    match /suppliers/{sid} {
+      allow read: if isSelf(sid) || isAdmin() || resource.data.status == 'VERIFIED';
+      allow write: if false;                                    // via supplierRegister / adminVerifySupplier
+    }
+
+    match /deals/{dealId} {
+      allow read: if resource.data.status == 'ACTIVE' || isAdmin()
+        || (role() == 'supplier' && resource.data.anchorSupplierId == request.auth.uid);
+      allow write: if false;
+    }
+
+    match /groups/{gid} {
+      allow read: if true;                                      // public: count, price, state, closesAt
+      allow write: if false;
+      match /members/{uid} { allow read: if isSelf(uid) || isAdmin(); allow write: if false; }
+      match /priceHistory/{id} { allow read: if true; allow write: if false; }
+      match /activity/{id} { allow read: if true; allow write: if false; }  // anonymised events only
+    }
+
+    match /auctions/{gid} {
+      allow read: if isAdmin() || isVerifiedSupplier();         // header only: deadline, ceiling, bidCount
+      allow write: if false;
+      match /bids/{supplierId} {                                // sealed bids
+        allow read: if isAdmin() || isSelf(supplierId);
+        allow write: if false;
+        match /revisions/{rid} { allow read: if isAdmin() || isSelf(supplierId); allow write: if false; }
+      }
+    }
+
+    match /requests/{rid} {
+      allow read: if signedIn();
+      allow write: if false;
+      match /votes/{uid} { allow read: if isSelf(uid) || isAdmin(); allow write: if false; }
+    }
+
+    match /orders/{oid} {
+      allow read: if isAdmin() || (signedIn() && (resource.data.uid == request.auth.uid
+        || resource.data.supplierId == request.auth.uid));
+      allow write: if false;
+    }
+    match /payments/{pid} { allow read: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid); allow write: if false; }
+    match /ratings/{orderId} { allow read: if true; allow write: if false; }
+    match /disputes/{id} { allow read: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid); allow write: if false; }
+
+    // Server-only collections
+    match /paymentEvents/{id} { allow read, write: if false; }
+    match /idempotencyKeys/{id} { allow read, write: if false; }
+    match /rateLimits/{id} { allow read, write: if false; }
+    match /stats/{doc=**} { allow read: if isAdmin(); allow write: if false; }
+    match /fraudSignals/{id} { allow read: if isAdmin(); allow write: if false; }
+    match /adminActions/{id} { allow read: if isAdmin(); allow write: if false; }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "GroupDeal",
+  "description": "Locality-based group buying commerce platform with dynamic pricing and neighborhood demand aggregation",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

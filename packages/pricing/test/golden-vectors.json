@@ -1,0 +1,17 @@
+{
+  "schedule": { "name": "A2 Gir Cow Ghee 1 L", "mrpPaise": 140000, "basePricePaise": 125000,
+    "tiers": [ { "minMembers": 5, "unitPricePaise": 109900 }, { "minMembers": 15, "unitPricePaise": 94900 }, { "minMembers": 30, "unitPricePaise": 79900 } ] },
+  "cases": [
+    { "n": -3, "tierIndex": -1, "unitPricePaise": 125000, "savingsPercent": 10, "membersToNextTier": 5 },
+    { "n": 0,  "tierIndex": -1, "unitPricePaise": 125000, "savingsPercent": 10, "membersToNextTier": 5 },
+    { "n": 1,  "tierIndex": -1, "unitPricePaise": 125000, "savingsPercent": 10, "membersToNextTier": 4 },
+    { "n": 4,  "tierIndex": -1, "unitPricePaise": 125000, "savingsPercent": 10, "membersToNextTier": 1 },
+    { "n": 5,  "tierIndex": 0,  "unitPricePaise": 109900, "savingsPercent": 21, "membersToNextTier": 10 },
+    { "n": 14, "tierIndex": 0,  "unitPricePaise": 109900, "savingsPercent": 21, "membersToNextTier": 1 },
+    { "n": 15, "tierIndex": 1,  "unitPricePaise": 94900,  "savingsPercent": 32, "membersToNextTier": 15 },
+    { "n": 18, "tierIndex": 1,  "unitPricePaise": 94900,  "savingsPercent": 32, "membersToNextTier": 12 },
+    { "n": 29, "tierIndex": 1,  "unitPricePaise": 94900,  "savingsPercent": 32, "membersToNextTier": 1 },
+    { "n": 30, "tierIndex": 2,  "unitPricePaise": 79900,  "savingsPercent": 42, "membersToNextTier": null },
+    { "n": 35, "tierIndex": 2,  "unitPricePaise": 79900,  "savingsPercent": 42, "membersToNextTier": null }
+  ]
+}
