@@ -1,6 +1,6 @@
 # Contributing to GroupDeal
 
-Thank you for your interest in contributing to **GroupDeal**! GroupDeal is an open-source, locality-based group buying commerce platform engineered with strict architectural standards, integer-paise financial accuracy, and clean MVVM layering.
+Thank you for your interest in **GroupDeal**! GroupDeal is a locality-based group buying commerce platform engineered with strict architectural standards, integer-paise financial accuracy, and clean MVVM layering. All source code is proprietary to Arul Murugan M.
 
 ## Code of Conduct
 We are committed to providing a welcoming, diverse, and harassment-free environment for everyone. Please be respectful and constructive in all interactions.

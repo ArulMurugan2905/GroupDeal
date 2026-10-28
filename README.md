@@ -3,7 +3,7 @@
 # 🛒 GroupDeal
 ### Locality-Based Group Buying Commerce Platform with Dynamic Pricing & Reverse Supplier Bidding
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](./LICENSE)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](./LICENSE)
 [![Android](https://img.shields.io/badge/Android-Jetpack%20Compose-green.svg?logo=android)](./android)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2-purple.svg?logo=kotlin)](./android)
 [![Firebase](https://img.shields.io/badge/Firebase-Firestore%20%7C%20Functions-orange.svg?logo=firebase)](./firestore)
@@ -215,7 +215,11 @@ Developed and maintained by **Arul Murugan M**.
 
 ---
 
-## 📄 License
+## 📄 License & Proprietary Notice
 
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for complete details.
+Copyright © 2026 **Arul Murugan M**. All Rights Reserved.
+
+This repository and its entire source codebase, architecture, and documentation are strictly **proprietary and confidential**. Viewing and review are permitted solely for recruitment, employment evaluation, and architectural audit purposes. 
+
+**No individual or organization is permitted to copy, reproduce, mirror, fork, redistribute, or use this code (or derivatives thereof) for commercial or non-commercial purposes without the express, prior written authorization of Arul Murugan M.** See the [LICENSE](./LICENSE) file for complete legal terms.
 

@@ -1,21 +1,39 @@
-MIT License
+Copyright (c) 2026 Arul Murugan M. All Rights Reserved.
 
-Copyright (c) 2026 Arul Murugan M
+CONFIDENTIAL AND PROPRIETARY.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software, source code, and associated documentation files (the "Software")
+are the exclusive intellectual property of Arul Murugan M.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+TERMS AND CONDITIONS:
+
+1. PERMITTED EVALUATION:
+   Permission is granted solely to view and review this source code for prospective
+   employment evaluation, portfolio inspection, recruitment, and academic review.
+
+2. STRICT PROHIBITION OF COPYING AND REPRODUCTION:
+   No part of this Software—including source code, architectures, algorithms,
+   pricing formulas, database schemas, or visual design tokens—may be copied,
+   reproduced, mirrored, duplicated, translated, or transcribed in any form or
+   by any means without prior explicit written authorization from Arul Murugan M.
+
+3. STRICT PROHIBITION OF DISTRIBUTION:
+   Redistribution, public hosting of forks, sublicensing, selling, leasing, or
+   sharing of this Software, in source, binary, or modified form, is strictly
+   prohibited.
+
+4. STRICT PROHIBITION OF COMMERCIAL AND PRODUCTION USE:
+   Use of this Software or any part thereof in any commercial application,
+   production service, personal business, or competitive product is strictly
+   forbidden.
+
+5. NO DERIVATIVE WORKS:
+   The creation of derivative works, modifications, adaptations, or alternative
+   implementations based on this codebase is strictly prohibited.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
