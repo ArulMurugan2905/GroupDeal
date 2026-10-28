@@ -2,14 +2,8 @@
 
 This directory contains the formal Project-Based Learning (PBL) and Mobile Application Development (MAD) deliverables for **GroupDeal**.
 
-## Project Details
-- **Course**: CS4504 – Mobile Application Development
-- **Department**: Computer Science and Engineering, Chennai Institute of Technology
-- **Academic Year**: 2026–2027
-- **Students**:
-  - **Arul Murugan M** (Roll No: 24CS0084)
-  - **Ritvik Doddapaneni** (Roll No: 24CS0755)
-- **Faculty Guide**: Mrs. M. Sindhu, Assistant Professor, Dept. of CSE
+## Project Author
+- **Arul Murugan M**
 
 ---
 

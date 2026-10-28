@@ -1,7 +1,6 @@
 # GroupDeal — Production Blueprint
 **Buy Together, Save More** · Locality-based group buying with dynamic pricing & supplier bidding
-Chennai Institute of Technology · Dept. of CSE · Mobile Application Development (CS4504) · 2026–2027
-Team: Arul Murugan M (24CS0084), Ritvik Doddapaneni (24CS0755) · Guide: Mrs. M. Sindhu, Assistant Professor, Dept. of CSE
+Author: Arul Murugan M
 
 This single document compiles the engineering package in `/docs`. If anything here conflicts with `DECISIONS.md`, `DECISIONS.md` wins. Status words used throughout: **IMPLEMENTED**, **PARTIAL**, **DESIGNED/PROPOSED**, **FUTURE**, **NOT VERIFIED**.
 
@@ -1861,7 +1860,7 @@ This file is the tie-breaker. If any document contradicts this file, this file w
 # Appendix 2. CLAUDE.md
 
 GroupDeal: locality-based group buying with tier-based dynamic pricing and supplier reverse auctions.
-Team: Arul Murugan M (24CS0084), Ritvik Doddapaneni (24CS0755). Guide: Mrs. M. Sindhu, Dept. of CSE, Chennai Institute of Technology. Course: Mobile Application Development (CS4504), 2026–2027.
+Author: Arul Murugan M.
 
 ### Source of truth (in order)
 1. Code in this repository.

@@ -1,7 +1,7 @@
 # CLAUDE.md — GroupDeal engineering rules
 
 GroupDeal: locality-based group buying with tier-based dynamic pricing and supplier reverse auctions.
-Team: Arul Murugan M (24CS0084), Ritvik Doddapaneni (24CS0755). Guide: Mrs. M. Sindhu, Dept. of CSE, Chennai Institute of Technology. Course: Mobile Application Development (CS4504), 2026–2027.
+Author: Arul Murugan M.
 
 ## Source of truth (in order)
 1. Code in this repository.

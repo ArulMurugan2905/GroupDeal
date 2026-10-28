@@ -209,21 +209,13 @@ The emulator UI will be available at `http://localhost:4000`.
 
 ---
 
-## 🎓 Academic Attribution & Project Team
+## 👤 Author
 
-This project was developed as a comprehensive Project-Based Learning (PBL) milestone for the **Mobile Application Development (CS4504)** curriculum at **Chennai Institute of Technology**.
-
-- **Authors:**
-  - **Arul Murugan M** (Roll No: `24CS0084`) – Dept. of Computer Science & Engineering
-  - **Ritvik Doddapaneni** (Roll No: `24CS0755`) – Dept. of Computer Science & Engineering
-- **Faculty Guide:** Mrs. M. Sindhu, Assistant Professor, Dept. of CSE
-- **Institution:** Chennai Institute of Technology (Autonomous), Anna University affiliated, Chennai, India
-- **Academic Year:** 2026–2027
-
-Formal academic documentation, slides, and posters can be found in the [`reports/`](./reports) directory.
+Developed and maintained by **Arul Murugan M**.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for complete details.
+
