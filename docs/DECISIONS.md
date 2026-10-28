@@ -6,7 +6,7 @@ This file is the tie-breaker. If any document contradicts this file, this file w
 
 | ID | Decision |
 |---|---|
-| D-01 | Monorepo: `/android`, `/web`, `/functions`, `/packages/pricing`, `/firestore` (rules, indexes, tests), `/docs`, `/scripts`, `CLAUDE.md`. |
+| D-01 | Monorepo: `/android`, `/web`, `/functions`, `/packages/pricing`, `/firestore` (rules, indexes, tests), `/docs`, `/scripts`, `ENGINEERING_GUIDELINES.md`. |
 | D-02 | All Firebase resources in **asia-south1 (Mumbai)**. |
 | D-03 | **Money is integer paise** everywhere (₹949 = `94900`). No floating-point money in storage, APIs or logic. Savings % = `floor((mrp − price) × 100 / mrp)`. |
 | D-04 | **Deal** = offer template (product, MRP, tier schedule, rules). **Group** = one buying round of a deal in one locality with a deadline. Prices, members and auctions belong to groups. |

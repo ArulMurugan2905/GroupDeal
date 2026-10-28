@@ -138,7 +138,7 @@ flowchart TB
 │   ├── GroupDeal_Project_Video.mp4  # HD video demo (preserved locally)
 │   └── README.md
 ├── .gitignore                       # Multi-platform production gitignore
-├── CLAUDE.md                        # Non-negotiable engineering rules & standards
+├── ENGINEERING_GUIDELINES.md        # Non-negotiable engineering rules & standards
 ├── CONTRIBUTING.md                  # Contribution guidelines & commit conventions
 ├── firebase.json                    # Firebase rules & emulator ports configuration
 ├── LICENSE                          # MIT License

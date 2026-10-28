@@ -7,7 +7,7 @@ We are committed to providing a welcoming, diverse, and harassment-free environm
 
 ## Architectural Source of Truth
 Before making architectural or business logic changes, review:
-1. [`CLAUDE.md`](./CLAUDE.md) – Core engineering guidelines and non-negotiables.
+1. [`ENGINEERING_GUIDELINES.md`](./ENGINEERING_GUIDELINES.md) – Core engineering guidelines and non-negotiables.
 2. [`docs/DECISIONS.md`](./docs/DECISIONS.md) – Architectural Decision Records (ADRs).
 3. [`docs/SYSTEM_ARCHITECTURE.md`](./docs/SYSTEM_ARCHITECTURE.md) – System overview and trust boundaries.
 4. [`docs/PRICING_ENGINE.md`](./docs/PRICING_ENGINE.md) – Single source of truth for dynamic pricing rules.

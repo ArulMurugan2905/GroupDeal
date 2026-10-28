@@ -1,4 +1,4 @@
-# CLAUDE.md — GroupDeal engineering rules
+# GroupDeal Engineering Guidelines & Architecture Invariants
 
 GroupDeal: locality-based group buying with tier-based dynamic pricing and supplier reverse auctions.
 Author: Arul Murugan M.
@@ -42,7 +42,7 @@ Never copy content from the sample MAD report (another team's project).
 - Pricing change ⇒ golden vectors updated and passing on TS and Kotlin.
 - CI must be green before merge; C-risk tests in `TEST_STRATEGY.md` are release blockers.
 
-## Workflow for AI-assisted changes
+## Engineering Workflow for Architecture Changes
 1. Read the relevant `/docs` spec and `DECISIONS.md` first.
 2. If a change contradicts a decision, stop and add a new decision/ADR instead of silently diverging.
 3. Keep changes small, staged per `IMPLEMENTATION_ROADMAP.md`.

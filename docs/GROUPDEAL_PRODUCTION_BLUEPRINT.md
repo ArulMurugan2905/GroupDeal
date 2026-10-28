@@ -1557,7 +1557,7 @@ Each stage ends with its acceptance criteria green in CI. Stages 0–10 + 14–1
 
 | Stage | Objective | Files / modules | Dependencies | DB changes | Backend | UI | Tests | Acceptance criteria |
 |---|---|---|---|---|---|---|---|---|
-| **0 Foundation** | Monorepo, toolchains, Firebase projects, CI skeleton | `/android` (Gradle version catalog, modules from ANDROID §2), `/functions` (TS, zod, firebase-functions v2), `/web` (Next.js+Tailwind), `/packages/pricing` (from this package), `/firestore`, `/scripts/seed.ts`, `.github/workflows/*`, `CLAUDE.md` | Firebase CLI, Node 20, JDK 17, Android Studio | rules + indexes from this package | emulator config, `guards.ts`, `contracts.ts`, `states.ts` skeleton | app shell with theme | pricing tests (PR-01..04) in CI | `firebase emulators:start` works; CI green on empty modules; pricing tests pass in CI |
+| **0 Foundation** | Monorepo, toolchains, Firebase projects, CI skeleton | `/android` (Gradle version catalog, modules from ANDROID §2), `/functions` (TS, zod, firebase-functions v2), `/web` (Next.js+Tailwind), `/packages/pricing` (from this package), `/firestore`, `/scripts/seed.ts`, `.github/workflows/*`, `ENGINEERING_GUIDELINES.md` | Firebase CLI, Node 20, JDK 17, Android Studio | rules + indexes from this package | emulator config, `guards.ts`, `contracts.ts`, `states.ts` skeleton | app shell with theme | pricing tests (PR-01..04) in CI | `firebase emulators:start` works; CI green on empty modules; pricing tests pass in CI |
 | **1 Design system** | Reusable UI kit | `:core:designsystem`, `:core:ui`, `web/components/ui` | 0 | — | — | PriceTag, TierRoadmap, ProgressMeter, CountdownChip, GroupCard, Empty/Error/Offline | screenshot/UI tests of components | Components render in light/dark, font scale 200%, TalkBack labels |
 | **2 Authentication** | Phone OTP + Google; roles | `:feature:auth`, `functions/src/auth/*`, `web/app/login`, session route | 0,1 | `users` | `onUserCreated`, claims, `updateProfile` | login, OTP, profile setup | SE-04, SE-07, auth integration | New user gets `users/{uid}` + claim customer; admin bootstrap script works on dev |
 | **3 Locality** | Resolve and set locality | `:feature:locality`, `functions/src/locality/*`, `scripts/seed-localities.ts` | 2 | `localities`, user locality fields | `resolveLocality`, `setUserLocality` | permission rationale, picker | change-limit test, invalid pincode test | User can only pick active localities; ≤ 3 changes/30 days; no precise location stored |
@@ -1658,7 +1658,7 @@ Record the answers in `DECISIONS.md` (new D-entries).
 # tools: Node 20 LTS (+ Node 22 optional for --experimental-strip-types), JDK 17, Android Studio, Git
 npm i -g firebase-tools
 mkdir groupdeal && cd groupdeal && git init
-# copy from this package: docs/, CLAUDE.md, packages/pricing/, firestore/
+# copy from this package: docs/, ENGINEERING_GUIDELINES.md, packages/pricing/, firestore/
 firebase login
 firebase init firestore functions emulators   # TypeScript functions; Firestore, Auth, Functions, Storage emulators
 ```
@@ -1702,7 +1702,7 @@ This file is the tie-breaker. If any document contradicts this file, this file w
 
 | ID | Decision |
 |---|---|
-| D-01 | Monorepo: `/android`, `/web`, `/functions`, `/packages/pricing`, `/firestore` (rules, indexes, tests), `/docs`, `/scripts`, `CLAUDE.md`. |
+| D-01 | Monorepo: `/android`, `/web`, `/functions`, `/packages/pricing`, `/firestore` (rules, indexes, tests), `/docs`, `/scripts`, `ENGINEERING_GUIDELINES.md`. |
 | D-02 | All Firebase resources in **asia-south1 (Mumbai)**. |
 | D-03 | **Money is integer paise** everywhere (₹949 = `94900`). No floating-point money in storage, APIs or logic. Savings % = `floor((mrp − price) × 100 / mrp)`. |
 | D-04 | **Deal** = offer template (product, MRP, tier schedule, rules). **Group** = one buying round of a deal in one locality with a deadline. Prices, members and auctions belong to groups. |
@@ -1857,7 +1857,7 @@ This file is the tie-breaker. If any document contradicts this file, this file w
 
 ---
 
-# Appendix 2. CLAUDE.md
+# Appendix 2. ENGINEERING_GUIDELINES.md
 
 GroupDeal: locality-based group buying with tier-based dynamic pricing and supplier reverse auctions.
 Author: Arul Murugan M.
@@ -1901,7 +1901,7 @@ Never copy content from the sample MAD report (another team's project).
 - Pricing change ⇒ golden vectors updated and passing on TS and Kotlin.
 - CI must be green before merge; C-risk tests in `TEST_STRATEGY.md` are release blockers.
 
-### Workflow for AI-assisted changes
+### Engineering Workflow for Architecture Changes
 1. Read the relevant `/docs` spec and `DECISIONS.md` first.
 2. If a change contradicts a decision, stop and add a new decision/ADR instead of silently diverging.
 3. Keep changes small, staged per `IMPLEMENTATION_ROADMAP.md`.

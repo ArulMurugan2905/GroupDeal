@@ -13,7 +13,7 @@ Record the answers in `DECISIONS.md` (new D-entries).
 # tools: Node 20 LTS (+ Node 22 optional for --experimental-strip-types), JDK 17, Android Studio, Git
 npm i -g firebase-tools
 mkdir groupdeal && cd groupdeal && git init
-# copy from this package: docs/, CLAUDE.md, packages/pricing/, firestore/
+# copy from this package: docs/, ENGINEERING_GUIDELINES.md, packages/pricing/, firestore/
 firebase login
 firebase init firestore functions emulators   # TypeScript functions; Firestore, Auth, Functions, Storage emulators
 ```
